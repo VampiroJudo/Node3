@@ -1,0 +1,20 @@
+{
+  "name": "library",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "John <johnconley507@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/VampiroJudo/Node3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
