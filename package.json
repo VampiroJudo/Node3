@@ -18,12 +18,17 @@
   },
   "homepage": "https://github.com/VampiroJudo/Node3#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "jshint-stylish": "^2.2.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
-    "jshint-stylish": "^2.2.1"
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "wiredep": "^4.0.0"
   }
 }

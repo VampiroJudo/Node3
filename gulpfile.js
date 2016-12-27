@@ -5,8 +5,7 @@ var jscs = require('gulp-jscs');
 var jsFiles = ['*.js', 'src/**/*.js'];
 
 
-
-gulp.task('style', function () {
+gulp.task('style', function() {
 	return gulp.src(jsFiles)
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish', {
@@ -14,3 +13,9 @@ gulp.task('style', function () {
 		}))
 		.pipe(jscs());
 });
+
+gulp.task('inject', function() {
+	var wiredep = require('wiredep').stream;
+
+	return gulp.src
+})
