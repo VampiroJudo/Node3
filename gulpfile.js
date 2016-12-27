@@ -17,5 +17,7 @@ gulp.task('style', function() {
 gulp.task('inject', function() {
 	var wiredep = require('wiredep').stream;
 
-	return gulp.src
+	return gulp.src('./src/views/*.html')
+		.pipe(wiredep(options))
+		.pipe(gulp.dest('./src/views'));
 })
