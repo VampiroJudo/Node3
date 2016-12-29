@@ -19,6 +19,7 @@
   "homepage": "https://github.com/VampiroJudo/Node3#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "jade": "^1.11.0",
