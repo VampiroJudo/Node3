@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 bookRouter.route('/')
 	.get(function(req, res){
-		res.send('Hello Books');
+		res.render('books');
 	});
 
 bookRouter.route('/Single')
@@ -26,7 +26,7 @@ app.use('/Books', bookRouter)
 
 app.get('/', function(req, res) {
 	res.render('index', {
-			title: 'Hello from render',
+			title: 'Books',
 			nav: [{
 					Link:'/Books', 
 					Text: 'Books'
