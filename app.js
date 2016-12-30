@@ -13,7 +13,7 @@ var handlebars = require('express-handlebars')
 app.engine('.hbs', handlebars({extname: '.hbs'}));
 
 app.get('/', function(req, res){
-	res.render('index', {list: ['a','b']});
+	res.render('index', {title: 'Hello from render',list: ['a','b']});
 });
 
 app.get('/books', function(req, res){
