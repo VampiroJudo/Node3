@@ -6,7 +6,11 @@ var port = 5000;
 
 app.use(express.static('public'));
 app.set('views', './src/views');
-app.set('view engine', 'jade');
+
+app.set('view engine', '.hbs');
+
+var handlebars = require('express-handlebars')
+app.engine('.hbs', handlebars({extname: '.hbs'}));
 
 app.get('/', function(req, res){
 	res.render('index', {list: ['a','b']});
