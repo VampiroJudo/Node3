@@ -3,12 +3,25 @@ var express = require("express");
 var app = express();
 
 var port = 5000;
+var bookRouter = express.Router();
 
 app.use(express.static('public'));
 app.set('views', './src/views');
 
 app.set('view engine', 'ejs');
 
+bookRouter.route('/')
+	.get(function(req, res){
+		res.send('Hello Books');
+	});
+
+bookRouter.route('/Single')
+	.get(function(req, res){
+		res.send('Hello Single Books');
+	});
+
+
+app.use('/Books', bookRouter)
 
 
 app.get('/', function(req, res) {
