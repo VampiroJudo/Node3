@@ -3,7 +3,7 @@ var express = require("express");
 var app = express();
 
 var port = 5000;
-var bookRouter = require('.src/routes/bookRoutes');
+var bookRouter = require('./src/routes/bookRoutes');
 
 app.use(express.static('public'));
 app.set('views', './src/views');
