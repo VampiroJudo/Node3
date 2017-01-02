@@ -3,48 +3,12 @@ var express = require("express");
 var app = express();
 
 var port = 5000;
-var bookRouter = express.Router();
+var bookRouter = require('.src/routes/bookRoutes');
 
 app.use(express.static('public'));
 app.set('views', './src/views');
 
 app.set('view engine', 'ejs');
-
-var books = [
-	
-		{
-			title: 'Operation Jedburgh',
-			author: 'Colin Beavan'
-		},
-		{
-			title: 'Lenin in Zurich',
-			author: 'Alexander Solzhenitsyn'
-		},
-		{
-			title: 'The Misfit Economy',
-			author: 'Alexa Clay/Kyra Maya Phillips'
-		}
-	]
-
-bookRouter.route('/')
-	.get(function(req, res){
-		res.render('books', {
-			title: 'Books',
-			nav: [{
-					Link:'/Books', 
-					Text: 'Books'
-				}, {
-					Link: '/Authors', 
-					Text: 'Authors'
-				}],
-				books: books
-		});
-});
-
-bookRouter.route('/Single')
-	.get(function(req, res){
-		res.send('Hello Single Books');
-	});
 
 
 app.use('/Books', bookRouter)
