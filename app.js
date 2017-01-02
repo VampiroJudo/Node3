@@ -36,9 +36,10 @@ bookRouter.route('/')
 				}, {
 					Link: '/Authors', 
 					Text: 'Authors'
-				}]
+				}],
+				books: books
 		});
-	});
+});
 
 bookRouter.route('/Single')
 	.get(function(req, res){
