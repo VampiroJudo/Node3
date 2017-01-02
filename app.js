@@ -10,6 +10,22 @@ app.set('views', './src/views');
 
 app.set('view engine', 'ejs');
 
+var books = [
+	
+		{
+			title: 'Operation Jedburgh',
+			author: 'Colin Beavan'
+		},
+		{
+			title: 'Lenin in Zurich',
+			author: 'Alexander Solzhenitsyn'
+		},
+		{
+			title: 'The Misfit Economy',
+			author: 'Alexa Clay/Kyra Maya Phillips'
+		}
+	]
+
 bookRouter.route('/')
 	.get(function(req, res){
 		res.render('books', {
