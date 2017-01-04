@@ -45,7 +45,7 @@ bookRouter.route('/:id')
 					Link: '/Authors', 
 					Text: 'Authors'
 				}],
-				book: book[id]
+				book: books[id]
 		});
 });
 
