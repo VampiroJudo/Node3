@@ -4,7 +4,6 @@ var bookRouter = express.Router();
 
 var router = function(nav){
 
-	
 	var books = [
 	
 		{
@@ -18,20 +17,13 @@ var router = function(nav){
 		{
 			title: 'The Misfit Economy',
 			author: 'Alexa Clay/Kyra Maya Phillips'
-		}
-	]
+		}]
 
 	bookRouter.route('/')
 	.get(function(req, res){
 		res.render('bookListView', {
 			title: 'Books',
-			nav: [{
-					Link:'/Books', 
-					Text: 'Books'
-				}, {
-					Link: '/Authors', 
-					Text: 'Authors'
-				}],
+			nav: nav,
 				books: books
 		});
 	});
@@ -41,15 +33,9 @@ var router = function(nav){
 		var id = req.params.id;
 		res.render('bookView', {
 			title: 'Books',
-			nav: [{
-					Link:'/Books', 
-					Text: 'Books'
-				}, {
-					Link: '/Authors', 
-					Text: 'Authors'
-				}],
+			nav: nav,
 				book: books[id]
 		});
 	});
 }
-module.exports = bookRouter;
+module.exports = router;

@@ -6,10 +6,10 @@ var port = 5000;
 
 var nav = [{
 	Link: '/Books',
-	Text: 'Books'
+	Text: 'Book'
 			}, {
 	Link: '/Authors',
-	Text: 'Authors'
+	Text: 'Author'
 	
 }];
 
@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 
 
 
-app.use('/Books', bookRouter)
+app.use('/Books', bookRouter);
 
 
 app.get('/', function(req, res) {
