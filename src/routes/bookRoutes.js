@@ -2,7 +2,10 @@ var express = require('express');
 
 var bookRouter = express.Router();
 
-var books = [
+var router = function(nav){
+
+	
+	var books = [
 	
 		{
 			title: 'Operation Jedburgh',
@@ -18,7 +21,7 @@ var books = [
 		}
 	]
 
-bookRouter.route('/')
+	bookRouter.route('/')
 	.get(function(req, res){
 		res.render('bookListView', {
 			title: 'Books',
@@ -31,9 +34,9 @@ bookRouter.route('/')
 				}],
 				books: books
 		});
-});
+	});
 
-bookRouter.route('/:id')
+	bookRouter.route('/:id')
 	.get(function(req, res){
 		var id = req.params.id;
 		res.render('bookView', {
@@ -47,6 +50,6 @@ bookRouter.route('/:id')
 				}],
 				book: books[id]
 		});
-});
-
+	});
+}
 module.exports = bookRouter;
