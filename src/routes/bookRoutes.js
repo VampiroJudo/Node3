@@ -3,7 +3,6 @@ var express = require('express');
 var bookRouter = express.Router();
 
 var router = function(nav){
-
 	var books = [
 	
 		{
@@ -18,15 +17,13 @@ var router = function(nav){
 			title: 'The Misfit Economy',
 			author: 'Alexa Clay/Kyra Maya Phillips'
 		}]
-
 	bookRouter.route('/')
 	.get(function(req, res){
 		res.render('bookListView', {
 			title: 'Books',
 			nav: nav,
 				books: books
-		});
-	});
+		});});
 
 	bookRouter.route('/:id')
 	.get(function(req, res){
@@ -35,7 +32,8 @@ var router = function(nav){
 			title: 'Books',
 			nav: nav,
 				book: books[id]
-		});
-	});
+		});});
+
+	return bookRouter;
 }
 module.exports = router;
