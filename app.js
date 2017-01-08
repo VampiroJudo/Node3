@@ -8,7 +8,7 @@ var config = {
 	database: 'Books'
 };
 
-sql.connect(congig, function(err){
+sql.connect(config, function(err){
 	console.log(err);
 })
 
