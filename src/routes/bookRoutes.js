@@ -26,7 +26,7 @@ var router = function(nav){
 					  	res.render('bookListView', {
 							title: 'Books',
 							nav: nav,
-							books: recordset
+							books: books
 			 });		
 		});
 	});
@@ -35,11 +35,24 @@ var router = function(nav){
 	bookRouter.route('/:id')
 	.get(function(req, res){
 		var id = req.params.id;
-		res.render('bookView', {
-			title: 'Books',
-			nav: nav,
-				book: books[id]
-		});});
+		var ps = new sql.PreparedStatement();
+		ps.input('id', sql.Int)
+		ps.prepare('select * from books where id = @id',
+			function(err){
+				ps.execute({
+					id: req.params.id
+
+					},
+					function (err, recordset){
+						res.render('bookView', {
+							title: 'Books',
+							nav: nav,
+							book: recordset[0]					
+						});
+					});
+				});
+		
+	});
 
 	return bookRouter;
 }
