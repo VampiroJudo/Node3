@@ -6,6 +6,7 @@ var config = {
 	password: 'pluralsight1@',
 	server: 'gpnju6fwr2.database.windows.net',
 	database: 'Books'
+
 };
 
 sql.connect(config, function(err){
