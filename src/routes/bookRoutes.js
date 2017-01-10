@@ -47,7 +47,7 @@ var router = function(nav){
 						res.render('bookView', {
 							title: 'Books',
 							nav: nav,
-							book: recordset[0]					
+							book: books[id]					
 						});
 					});
 				});
