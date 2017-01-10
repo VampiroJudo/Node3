@@ -25,6 +25,7 @@
     "gulp-jshint": "^2.0.4",
     "jade": "^1.11.0",
     "jshint-stylish": "^2.2.1",
+    "mongodb": "^2.2.19",
     "mssql": "^3.3.0"
   },
   "devDependencies": {
