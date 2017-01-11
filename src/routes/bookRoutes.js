@@ -1,13 +1,13 @@
 var express = require('express');
 var bookRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
-var objectId = require('mongod').ObjectID;
+var objectId = require('mongodb').ObjectID;
 
 var router = function(nav){
 	
-	bookRouter.route('/')
+	bookRouter.route('/:id')
 		.get(function (res, req) {
-			var  id = ObjectID(req.params.id);
+			var id = new objectId(req.params.id);
 			var url = 
 				'mongodb://localhost:27017/libraryApp';
 
@@ -19,19 +19,20 @@ var router = function(nav){
 					res.render('bookView', {
 						title: 'Books',
 						nav: nav,
-						books: results
+						book: results
 					});
-				});
+				})
 			});
 		});
 
 
-	bookRouter.route('/:id')
-		.get(function (req, res) {
+	// bookRouter.route('/:id')
+	// 	.get(function (req, res) {
 			
 
 	
 	return bookRouter;
+
 };
 
 module.exports = router;
