@@ -19,9 +19,9 @@ var router = function(nav){
 					res.render('bookListView', {
 						title: 'Books',
 						nav: nav,
-						books: books
+						books: results
 					});
-				}
+				});
 			});
 		});
 
@@ -29,6 +29,11 @@ var router = function(nav){
 	bookRouter.route('/:id')
 		.get(function (req, res) {
 			var id = req.params.id;
+			res.render('bookView', {
+				title: 'Books',
+				nav: nav,
+				book: books[id]
+			});
 			
 		});
 
