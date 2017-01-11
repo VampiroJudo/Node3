@@ -1,30 +1,27 @@
 var express = require('express');
-
 var bookRouter = express.Router();
+var mongodb = require('mongodb').MongoClient;
 
 
 
 var router = function(nav){
-	var books = [
 	
-		{
-			title: 'Operation Jedburgh',
-			author: 'Colin Beavan'
-		},
-		{
-			title: 'Lenin in Zurich',
-			author: 'Alexander Solzhenitsyn'
-		},
-		{
-			title: 'The Misfit Economy',
-			author: 'Alexa Clay/Kyra Maya Phillips'
-		}];
 	bookRouter.route('/')
 		.get(function (res, req) {
-			res.render('bookListView', {
-				title: 'Books',
-				nav: nav,
-				books: books
+			var url = 
+				'mongodb://localhost:27017/libraryApp';
+
+			mongodb.connect(url, function (err, db) {
+			var collection = db.collection('books');
+			
+			collection.find({}).toArray(
+				function(err, results) {
+					res.render('bookListView', {
+						title: 'Books',
+						nav: nav,
+						books: books
+					});
+				}
 			});
 		});
 
