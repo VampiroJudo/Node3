@@ -18,7 +18,7 @@ var router = function(nav){
 		{
 			title: 'The Misfit Economy',
 			author: 'Alexa Clay/Kyra Maya Phillips'
-		}]
+		}];
 	bookRouter.route('/')
 		.get(function (res, req) {
 			res.render('bookListView', {
@@ -33,9 +33,10 @@ var router = function(nav){
 		.get(function (req, res) {
 			var id = req.params.id;
 			
-		})
+		});
 
 	
 	return bookRouter;
-}
+};
+
 module.exports = router;

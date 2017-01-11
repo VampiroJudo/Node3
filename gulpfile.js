@@ -24,19 +24,19 @@ gulp.task('inject', function() {
 
 	var injectOptions = {
 		ignorePath: '/public'
-	}
+	};
 	
 	var options = {
 		bowerJson: require('./bower.json'),
 		directory: './public/lib',
 		ignorePath: '../../public'
-	}
+	};
 
 	return gulp.src('./src/views/*.jade')
 		.pipe(wiredep(options))
 		.pipe(inject(injectSrc, injectOptions))
 		.pipe(gulp.dest('./src/views'));
-})
+});
 
 gulp.task('serve', ['style', 'inject'], function(){
 	var options = {
@@ -46,9 +46,9 @@ gulp.task('serve', ['style', 'inject'], function(){
 			'PORT': 5000
 		},
 		watch: jsFiles
-	}
+	};
 	return nodemon(options)
 		.on('restart', function(ev){
 			console.log('Restarting...');
-		})
-})
+		});
+});
