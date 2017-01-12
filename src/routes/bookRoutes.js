@@ -26,7 +26,7 @@ var router = function(nav){
 
 
 	bookRouter.route('/:id')
-		.get(function (res, req) {
+		.get(function (req, res) {
 			var id = new objectId(req.params.id);
 			var url = 
 				'mongodb://localhost:27017/libraryApp';
