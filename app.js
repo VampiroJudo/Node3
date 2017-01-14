@@ -37,6 +37,10 @@ app.set('view engine', 'ejs');
 app.use('/Books', bookRouter);
 app.use('/Admin', adminRouter);
 app.use('/Auth', authRouter);
+app.use(cookie-parser());
+app.use(session({secret: 'library'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', function(req, res) {
 	res.render('index', {
