@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 
 app.use('/Books', bookRouter);
 app.use('/Admin', adminRouter);
-app/use('/Auth', authRouter);
+app.use('/Auth', authRouter);
 
 app.get('/', function(req, res) {
 	res.render('index', {
