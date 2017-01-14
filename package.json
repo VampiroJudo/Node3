@@ -19,15 +19,18 @@
   "homepage": "https://github.com/VampiroJudo/Node3#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "jade": "^1.11.0",
     "jshint-stylish": "^2.2.1",
     "mongodb": "^2.2.19",
-    "mssql": "^3.3.0"
+    "mssql": "^3.3.0",
+    "passport": "^0.3.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
