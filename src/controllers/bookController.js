@@ -50,7 +50,8 @@ var bookController = function(bookService, nav){
 
 	return {
 		getIndex: getIndex,
-		getById: getById
+		getById: getById,
+		middleware: middleware
 	};
 };
 
