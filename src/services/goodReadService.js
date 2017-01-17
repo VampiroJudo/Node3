@@ -1,4 +1,4 @@
-var goodReadService = function(){
+var goodReadService = function () {
 
 	var gerBookById = function(id, cb){
 		cb(null, {
@@ -8,7 +8,7 @@ var goodReadService = function(){
 
 	return {
 
-		getBookId: getBookId
+		getBookById: getBookById
 	}
 };
 
