@@ -17,7 +17,7 @@ module.exports = function () {
 					username: username 
 				},
 				function (err, results) {
-					if (results.pasword === password) {
+					if(results.password === password) {
 						var user = results;
 						done(null, user);
 					} else {
