@@ -6,7 +6,7 @@ var bookController = require('../controllers/bookController');
 
 var router = function(nav){
 	var bookService = 
-	require('../services/goodReadService')();
+	require('../services/goodReadsService')();
 	var bookController = 
 		require('../controllers/bookController')(bookService, nav);
 
