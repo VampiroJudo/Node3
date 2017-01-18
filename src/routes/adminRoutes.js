@@ -7,15 +7,21 @@ var books = [
 	
 		{
 			title: 'Operation Jedburgh',
-			author: 'Colin Beavan'
+			author: 'Colin Beavan',
+			bookId: 903917,
+			read: false
 		},
 		{
 			title: 'Lenin in Zurich',
-			author: 'Alexander Solzhenitsyn'
+			author: 'Alexander Solzhenitsyn',
+			bookId: 295017,
+			read: false
 		},
 		{
 			title: 'The Misfit Economy',
-			author: 'Alexa Clay/Kyra Maya Phillips'
+			author: 'Alexa Clay/Kyra Maya Phillips',
+			bookId: 23522336,
+			read: false
 		}];
 
 var router = function (nav) {
