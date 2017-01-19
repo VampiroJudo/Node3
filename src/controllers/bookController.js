@@ -40,7 +40,7 @@ var bookController = function(bookService, nav){
 					_id: id
 				},
 				function(err, results) {
-					if(results.bookId){
+					if(results.bookId) {
 						bookService
 					.getBookById(results.bookId,
 							function(err, book) { 
@@ -57,9 +57,9 @@ var bookController = function(bookService, nav){
 							res.render('bookView', {
 									title: 'Books',
 									nav: nav,
-					}				book: results
-					
-				}
+			                        book: results
+					};
+				};
 			);
 		});
 
