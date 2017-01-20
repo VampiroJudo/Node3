@@ -8,7 +8,7 @@ var books = [
 		{
 			title: 'Operation Jedburgh',
 			author: 'Colin Beavan',
-			bookId: 903917,
+			bookId: 1290081,
 			read: false
 		},
 		{
@@ -22,7 +22,30 @@ var books = [
 			author: 'Alexa Clay/Kyra Maya Phillips',
 			bookId: 23522336,
 			read: false
-		}];
+		},
+
+		{
+			title: 'Hadrian and the Triumph of Rome',
+			author: 'Anthony Everitt',
+			bookId: 6060179,
+			read: false
+		},
+
+		{
+			title: 'Andres Segovia As I knew Him',
+			author: 'John W. Duarte',
+			bookId: 3748054,
+			read: false
+		},
+
+		{
+			title: 'Kodokan Judo: The Essential Guide to Judo ',
+			author: 'Jigoro Kano',
+			bookId: 1207038,
+			read: false
+		}
+	];
+
 
 var router = function (nav) {
 
