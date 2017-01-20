@@ -62,7 +62,7 @@ var router = function (nav) {
 						db.close();
 					});
 			});
-			//res.send('inserting books');
+			
 		});
 
 

@@ -18,7 +18,7 @@ var router = function() {
 				collection.insert(user, 
 					function(err, results) {
 					req.login(req.body, function () {
-				res.redirect('/auth/profile');
+				res.redirect('/');
 					});
 			});});
 
@@ -28,12 +28,12 @@ var router = function() {
 			.post(passport.authenticate('local', {
 				failureRedirect: '/'
 			}),	function(req, res) {
-				res.redirect('/auth/profile');
+				res.redirect('/books');
 			});
 		authRouter.route('/profile')
 			.all(function (req, res, next) {
 				if (!req.user) {
-					res.redirect('/');
+					res.redirect('/books');
 				}
 				next();
 			})
