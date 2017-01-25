@@ -15,6 +15,10 @@ h1,h2,h3,.highlight,.navbar a,#masthead h4 {
   font-family:'Oswald',arial narrow,sans-serif;
 }
 
+h1 {
+  font-size: 25px;
+}
+
 footer {
 
   margin-top:40px;
@@ -22,6 +26,14 @@ footer {
   padding-bottom:40px;
   background-color:#cecece;
  
+}
+
+#userName {
+  margin: 5px;
+}
+
+#password {
+  margin: 5px;
 }
 
 

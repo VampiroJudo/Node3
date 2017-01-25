@@ -16,6 +16,7 @@ var goodReadsService = function () {
 			response.on('data', function(chunk) {
 				str += chunk;
 			});
+
 			response.on('end', function() {
 				parser.parseString(str,
 					 function(err, result) {
@@ -24,10 +25,10 @@ var goodReadsService = function () {
 			    	});
 				});
 			};
- 		
 			http.request(options, callback).end();
-		
+
 		};
+		
 
 	return {
 
